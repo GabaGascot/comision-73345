@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Questrial&family=Tenor+Sans&display=swap');
+
+:root {
+  --pink: #f2c3d4;
+  --purple: #5b5bd6;
+  --accent: #A66D82;
+  --light-bg: #F2EBEE;
+  --dark-gray: #1f2937;
+}
+
+* {
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+
+/* ========== TYPOGRAPHY ========== */
+p, li {
+  font-family: "Cormorant", serif;
+}
+
+h1 {
+  font-family: "Tenor Sans", sans-serif;
+}
+
+h2, h3 {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+}
+
+/* ========== HEADER ========== */
+header {
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.book-btn {
+  padding: 10px 16px;
+  background-color: var(--accent);
+  color: var(--light-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  font-family: "Questrial", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* ========== MAIN CONTENT ========== */
+.text {
+  text-align: center;
+}
+
+.main-content {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.main-content .border-box {
+  background-color: lightgray;
+  padding: 20px;
+  border: 5px solid black;
+  display: inline-block;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.homepage-banner {
+  width: 60%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+/* ========== HOW IT WORKS SECTION ========== */
+.pink-background {
+  background-color: var(--pink);
+  padding: 2rem 1rem;
+}
+
+.how-it-works .step-box {
+  border: 2px solid var(--accent);
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+}
+
+/* ========== PRICING PAGE (preview) ========== */
+.walks-container {
+  background-color: white;
+  border: 2px solid #d1d5db;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+}
+
+.walks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar-collapse {
+    justify-content: center !important;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--purple);
+    font-weight: 500;
+  }
+
+  .book-btn {
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-text h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .homepage-banner {
+    width: 100%;
+  }
+}
+
