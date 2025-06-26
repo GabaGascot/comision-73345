@@ -62,34 +62,71 @@
     </div>
   </main>
 
-  <!-- How it Works -->
-  <section class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">HOW IT WORKS</h2>
-      <div class="row text-center">
-        <div class="col-md-3 col-6 mb-4">
-          <h3>1</h3>
-          <p>Fill out our form</p>
-          <img src="./assets/filloutform.png" class="img-fluid" alt="...">
+<!-- How it Works -->
+<section class="pink-background py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">HOW IT WORKS</h2>
+
+    <!-- Carrusel para mobile -->
+    <div class="d-block d-md-none">
+      <div id="howItWorksCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <h3>1</h3>
+            <p>Fill out our form</p>
+            <img src="./assets/filloutform.png" class="img-fluid" alt="a person filling out a form">
+          </div>
+          <div class="carousel-item">
+            <h3>2</h3>
+            <p>We Contact you</p>
+            <img src="./assets/wecontactyou.png" class="img-fluid" alt="A person on the phone contacting the client.">
+          </div>
+          <div class="carousel-item">
+            <h3>3</h3>
+            <p>First Meeting</p>
+            <img src="./assets/firstmeeting.png" class="img-fluid" alt="a person meeting the pet for the first time.">
+          </div>
+          <div class="carousel-item">
+            <h3>4</h3>
+            <p>You Receive Quality Services</p>
+            <img src="./assets/receiveservices.png" class="img-fluid" alt="pet clients happy with the service.">
+          </div>
         </div>
-        <div class="col-md-3 col-6 mb-4">
-          <h3>2</h3>
-          <p>We Contact you</p>
-          <img src="./assets/wecontactyou.png" class="img-fluid" alt="...">
-        </div>
-        <div class="col-md-3 col-6 mb-4">
-          <h3>3</h3>
-          <p>First Meeting</p>
-          <img src="./assets/firstmeeting.png" class="img-fluid" alt="...">
-        </div>
-        <div class="col-md-3 col-6 mb-4">
-          <h3>4</h3>
-          <p>You Receive Quality Services</p>
-          <img src="./assets/receiveservices.png" class="img-fluid" alt="...">
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#howItWorksCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#howItWorksCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-  </section>
+
+    <!-- Grilla para desktop -->
+    <div class="row text-center d-none d-md-flex">
+      <div class="col-md-3 mb-4">
+        <h3>1</h3>
+        <p>Fill out our form</p>
+        <img src="./assets/filloutform.png" class="img-fluid" alt="a person filling out a form">
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3>2</h3>
+        <p>We Contact you</p>
+        <img src="./assets/wecontactyou.png" class="img-fluid" alt="A person on the phone contacting the client.">
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3>3</h3>
+        <p>First Meeting</p>
+        <img src="./assets/firstmeeting.png" class="img-fluid" alt="a person meeting the pet for the first time.">
+      </div>
+      <div class="col-md-3 mb-4">
+        <h3>4</h3>
+        <p>You Receive Quality Services</p>
+        <img src="./assets/receiveservices.png" class="img-fluid" alt="pet clients happy with the service.">
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="text-center bg-light py-4">
