@@ -219,7 +219,7 @@ img {
 /* -------- WALKS -------- */
 
 .walks-section {
-  background-color: var(--pink); /* Usa el color que ya definiste */
+  background-color: var(--pink); 
 }
 
 .walks-cards {
