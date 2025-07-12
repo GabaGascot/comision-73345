@@ -1,21 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Questrial&family=Tenor+Sans&display=swap');
-
-:root {
-  --pink: #F5D7E3;
-  --purple: #F4A5AE;
-  --accent: #A8577E;
-  --light-bg: #F2EBEE;
-  --dark-gray: #1f2937;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Questrial&family=Tenor+Sans&display=swap");
 * {
   margin: 0;
-  padding: 0;  
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* ========== TYPOGRAPHY ========== */
-p, li {
+/* BASE */
+p,
+li {
   font-family: "Cormorant", serif;
 }
 
@@ -23,64 +15,77 @@ h1 {
   font-family: "Tenor Sans", sans-serif;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-family: "Questrial", sans-serif;
   font-weight: 400;
 }
 
-/* ========== HEADER ========== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LAYOUT */
 header {
   background-color: white;
   border-bottom: 1px solid #eee;
 }
-
-.navbar {
+header .navbar {
   padding: 1rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-
-.navbar-brand {
+header .navbar .navbar-brand {
   font-family: "Tenor Sans", sans-serif;
   font-size: 1.5rem;
   color: black;
 }
-
-.navbar-collapse {
+header .navbar .navbar-collapse {
   flex-grow: 1;
   justify-content: center;
 }
-
-.navbar-nav {
+header .navbar .navbar-nav {
   display: flex;
   gap: 2rem;
 }
-
-.navbar-nav .nav-link {
-  color: var(--dark-gray);
+header .navbar .navbar-nav .nav-link {
+  color: #1f2937;
   font-weight: 500;
+  text-decoration: none;
 }
-
-.book-btn {
+header .navbar .navbar-nav .nav-link:hover {
+  color: #A8577E;
+}
+header .navbar .book-btn {
   padding: 10px 16px;
-  background-color: var(--accent);
-  color: var(--light-bg);
+  background-color: #A8577E;
+  color: #F2EBEE;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+header .navbar .book-btn:hover {
+  background-color: rgb(134.4, 69.6, 100.8);
 }
 
-/* -------- HERO SECTION -------- */
 .hero-banner {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 300px;
+  overflow: hidden;
 }
-
-.hero-text {
+.hero-banner .homepage-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-banner .hero-text {
   font-family: "Questrial", sans-serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -90,19 +95,30 @@ header {
   color: white;
   text-align: center;
   padding: 0 1rem;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
 }
-
-.hero-text h2 {
+.hero-banner .hero-text h2 {
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
-
-.hero-text p {
+.hero-banner .hero-text p {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
-/* -------- MAIN CONTENT -------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .text {
   text-align: center;
 }
@@ -111,7 +127,6 @@ header {
   text-align: center;
   margin: 2rem auto;
 }
-
 .main-content .border-box {
   background-color: lightgray;
   padding: 20px;
@@ -120,7 +135,8 @@ header {
 }
 
 .social-icons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
@@ -131,66 +147,181 @@ img {
   height: auto;
 }
 
-.homepage-banner {
-  width: 60%;
-  height: auto;
-  display: block;
-  position: relative;
+.walks-section {
+  background-color: #F5D7E3;
+}
+.walks-section .walks-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.walks-section .walks-cards .walk-card {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.walks-section .walks-cards .walk-card span {
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+  color: #1f2937;
+}
+.walks-section .walks-cards .walk-card .walk-label,
+.walks-section .walks-cards .walk-card .walk-price,
+.walks-section .walks-cards .walk-card .walk-note {
+  flex: 1;
+  margin: 0.3rem 0;
 }
 
-/* -------- HOW IT WORKS SECTION -------- */
-.pink-background {
-  background-color: var(--pink);
+.pink-background,
+.pinkBackgrounds {
+  background-color: #F5D7E3;
   padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  text-align: center;
 }
 
 .how-it-works .step-box {
-  border: 2px solid var(--accent);
+  border: 2px solid #A8577E;
   text-align: center;
   padding: 1rem;
   height: 100%;
 }
 
-/* -------- PRICING PAGE (preview) --------*/
-.walks-container {
+.walksContainer {
   background-color: white;
-  border: 2px solid #d1d5db;
   border-radius: 2rem;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
-  color: var(--dark-gray);
+  margin: 1rem auto;
+  max-width: 500px;
+  font-weight: bold;
+  color: #1f2937;
   text-transform: uppercase;
 }
 
-.walks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 800px;
+.center {
+  text-align: center;
 }
 
+.footer-section {
+  background-color: #f9f9f9;
+  color: #1f2937;
+  font-family: "Cormorant", serif;
+  font-size: 0.9rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer-section a, .footer-section .footer-link {
+  text-decoration: none;
+  color: #1f2937;
+  font-family: "Questrial", sans-serif;
+  font-weight: 500;
+}
+.footer-section a:hover, .footer-section .footer-link:hover {
+  color: #A8577E;
+  text-decoration: underline;
+}
+.footer-section hr {
+  display: none;
+}
+@media (max-width: 991px) {
+  .footer-section .footer-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 2rem;
+  }
+  .footer-section .footer-links-container > div {
+    width: 150px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-banner {
+    height: 250px;
+  }
+  .hero-banner .homepage-banner {
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-banner .hero-text {
+    top: 50%;
+    padding: 0 1rem;
+  }
+  .hero-banner .hero-text h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  .hero-banner .hero-text p {
+    font-size: 1rem;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .navbar .navbar-nav {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1rem;
+  }
+  .navbar .navbar-nav .nav-link {
+    color: var(--purple);
+    font-weight: 500;
+  }
+  .navbar .navbar-toggler {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar .navbar-collapse {
+    justify-content: center !important;
+  }
+  .book-btn {
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .walk-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .walk-label,
+  .walk-price,
+  .walk-note {
+    margin: 0.5rem 0;
+  }
+  .homepage-banner {
+    width: 100%;
+  }
+}
+/* COMPONENTS */
+.book-btn,
 .btn-custom {
-  background-color: var(--accent); /* Usa el color #A8577E definido en :root */
+  background-color: #A8577E;
   color: white;
   border: none;
   border-radius: 6px;
   padding: 0.5rem 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
 }
-
+.book-btn:hover,
 .btn-custom:hover {
-  background-color: #8e466a; /* Versión más oscura para hover */
+  background-color: #8e466a;
 }
 
-/* -------- PINK BACKGROUNDS -------- */
 .pinkBackgrounds {
-  background-color: var(--pink);
+  background-color: #F5D7E3;
   padding: 2rem 1rem;
   margin-top: 2rem;
   border-radius: 1rem;
@@ -207,7 +338,7 @@ img {
   margin: 1rem auto;
   max-width: 500px;
   font-weight: bold;
-  color: var(--dark-gray);
+  color: #1f2937;
   text-transform: uppercase;
 }
 
@@ -215,148 +346,4 @@ img {
   text-align: center;
 }
 
-
-/* -------- WALKS -------- */
-
-.walks-section {
-  background-color: var(--pink); 
-}
-
-.walks-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.walk-card {
-  background-color: white;
-  border-radius: 2rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.walk-card span {
-  font-family: "Questrial", sans-serif;
-  font-weight: bold;
-  color: var(--dark-gray);
-}
-
-.walk-label, .walk-price, .walk-note {
-  flex: 1;
-  margin: 0.3rem 0;
-}
-
-
-
-
-
-/* -------- RESPONSIVE -------- */
-@media (max-width: 991.98px) {
-  .navbar-toggler {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .navbar-collapse {
-    justify-content: center !important;
-  }
-
-  .navbar-nav {
-    flex-direction: column !important;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .navbar-nav .nav-link {
-    color: var(--purple);
-    font-weight: 500;
-  }
-
-  .book-btn {
-    margin-top: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-text h2 {
-    font-size: 1.3rem;
-    line-height: 1.4;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .homepage-banner {
-    width: 100%;
-  }
-  @media (max-width: 991.98px) {
-  .navbar-toggler {
-    margin-left: auto;
-    margin-right: 1rem;
-  }
-
-  @media (min-width: 768px) {
-  .walk-card {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  .walk-label, .walk-price, .walk-note {
-    margin: 0;
-    text-align: center;
-  }
-}
-/* -------- FOOTER SECTION -------- */
-.footer-section {
-  background-color: #f9f9f9;
-  color: #1f2937;
-  font-family: "Cormorant", serif;
-  font-size: 0.9rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.footer-section a {
-  text-decoration: none;
-  color: #1f2937;
-  font-family: "Questrial", sans-serif;
-  font-weight: 500;
-}
-
-.footer-section a:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-
-.footer-section .footer-link {
-  color: #1f2937;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-section .footer-link:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-
-.footer-section hr {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .footer-section .footer-links-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0.5rem 2rem;
-  }
-
-  .footer-section .footer-links-container > div {
-    width: 150px;
-  }
-}
+/*# sourceMappingURL=styles.css.map */

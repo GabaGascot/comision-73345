@@ -1,0 +1,32 @@
+// Cards y contenedores secundarios
+
+.pinkBackgrounds {
+  background-color: $pink;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.walksContainer {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: 500px;
+  font-weight: bold;
+  color: $dark-gray;
+  text-transform: uppercase;
+
+  // Si quieres centrar mejor algún contenido adentro más adelante
+  //.inner-content {
+  //  @include flex-center;
+  //}
+}
+
+.center {
+  text-align: center;
+}

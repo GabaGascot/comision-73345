@@ -1,0 +1,41 @@
+.footer-section {
+  background-color: #f9f9f9;
+  color: $dark-gray;
+  font-family: $font-serif;
+  font-size: 0.9rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $dark-gray;
+    font-family: $font-sans;
+    font-weight: 500;
+
+    &:hover {
+      color: $accent;
+      text-decoration: underline;
+    }
+  }
+
+  .footer-link {
+    @extend a; // reutilizo los estilos del link anterior
+  }
+
+  hr {
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    .footer-links-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.5rem 2rem;
+
+      > div {
+        width: 150px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// Tipografías por jerarquía
+
+p,
+li {
+  font-family: $font-serif;
+}
+
+h1 {
+  font-family: $font-title;
+}
+
+h2,
+h3 {
+  font-family: $font-sans;
+  font-weight: 400;
+}
+
+// Ajuste global para imágenes
+img {
+  max-width: 100%;
+  height: auto;
+}

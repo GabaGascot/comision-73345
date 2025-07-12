@@ -1,0 +1,19 @@
+// Botones principales de la web
+
+.book-btn,
+.btn-custom {
+  background-color: $accent;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  // Uso de mixin para transición
+  @include transition(background-color);
+
+  &:hover {
+    background-color: #8e466a;
+  }
+}

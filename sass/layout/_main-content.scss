@@ -1,0 +1,32 @@
+// Sección de texto introductorio centrado
+.text {
+  text-align: center;
+}
+
+// Contenido principal con un borde decorativo
+.main-content {
+  text-align: center;
+  margin: 2rem auto;
+
+  .border-box {
+    background-color: lightgray;
+    padding: 20px;
+    border: 5px solid black;
+    display: inline-block;
+  }
+}
+
+// Íconos sociales distribuidos con CSS Grid
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+// Estilo global para imágenes
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,73 @@
+// Sección principal de caminatas
+.walks-section {
+  background-color: $pink;
+
+  .walks-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .walk-card {
+      background-color: white;
+      border-radius: 2rem;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      span {
+        font-family: $font-sans;
+        font-weight: bold;
+        color: $dark-gray;
+      }
+
+      .walk-label,
+      .walk-price,
+      .walk-note {
+        flex: 1;
+        margin: 0.3rem 0;
+      }
+    }
+  }
+}
+
+// Fondo rosado reutilizable
+.pink-background,
+.pinkBackgrounds {
+  background-color: $pink;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+// Sección de cómo funciona
+.how-it-works {
+  .step-box {
+    border: 2px solid $accent;
+    text-align: center;
+    padding: 1rem;
+    height: 100%;
+  }
+}
+
+// Contenedor reutilizable en página de precios
+.walksContainer {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: 500px;
+  font-weight: bold;
+  color: $dark-gray;
+  text-transform: uppercase;
+}
+
+// Clases utilitarias
+.center {
+  text-align: center;
+}

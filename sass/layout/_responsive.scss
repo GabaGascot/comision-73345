@@ -1,0 +1,80 @@
+// Ajustes responsive para dispositivos menores a 992px
+@media (max-width: 991.98px) {
+
+  // HERO
+  .hero-banner {
+    height: 250px;
+
+    .homepage-banner {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      top: 50%;
+      padding: 0 1rem;
+
+      h2 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // NAVBAR
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    .navbar-nav {
+      flex-direction: column !important;
+      text-align: center;
+      gap: 1rem;
+
+      .nav-link {
+        color: var(--purple);
+        font-weight: 500;
+      }
+    }
+
+    .navbar-toggler {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .navbar-collapse {
+      justify-content: center !important;
+    }
+  }
+
+  // BOTÓN DE RESERVA
+  .book-btn {
+    margin-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // WALK CARDS
+  .walk-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .walk-label,
+  .walk-price,
+  .walk-note {
+    margin: 0.5rem 0;
+  }
+
+  // HOMEPAGE IMAGE
+  .homepage-banner {
+    width: 100%;
+  }
+}

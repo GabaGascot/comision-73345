@@ -1,0 +1,31 @@
+// Centrar elementos con flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Agregar una transición suave
+@mixin transition($props...) {
+  transition: $props 0.3s ease-in-out;
+}
+
+// Animación de fade-in reutilizable
+@mixin fade-in($duration: 1s) {
+  opacity: 0;
+  animation: fadeIn $duration ease forwards;
+}
+
+// Tamaño de texto responsive usando clamp
+@mixin responsive-font($min, $max) {
+  font-size: clamp(#{$min}, 2vw, #{$max});
+}
+
+// Media queries reutilizables
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 767px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 991px) { @content; }
+  }
+}
